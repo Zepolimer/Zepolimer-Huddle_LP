@@ -1,6 +1,10 @@
 *,
 *::before,
-*::after { margin: border-box; }
+*::after { 
+    margin: 0;
+    padding: 0;
+    border: border-box; 
+}
 
 :root {
 --pink: hsl(322, 100%, 66%);
@@ -9,10 +13,12 @@
 --grayish-blue: hsl(208, 11%, 55%);
 }
 
-
+body {
+    width: 100%;
+}
 
 .main-container {
-    width: 60vw;
+    width: 100%;
     margin: 0px auto;
     font-family: 'Open Sans', sans-serif;
 }
@@ -22,25 +28,27 @@ header {
     font-family: 'Poppins', sans-serif;
     background-image: url(./images/bg-hero-mobile.svg);
     background-color: var(--very-pale-cyan);
-    width: 60vw;
+    width: 100%;
     text-align: center;
 }
 
 .huddle-logo  {
     display: flex;
+    justify-content: space-between;
+    margin: 0px 20px 80px 20px;
+    padding-top: 20px;
 }
 .logo {
     width: 90px;
-    margin: 15px 100px 70px 10px;
+    height: 20px;
 }
 .tryit {
-    width: 80px;
-    height: 20px;
+    width: 100px;
+    height: 25px;
     border-radius: 25px;
     background-color: white;
     box-shadow: 1px 1px 1px 1px hsla(209, 11%, 55%, 0.404);
-    font-size: 10px;
-    margin: 12px 0 0 0;
+    font-size: 11px;
     border: none;
     outline: none;
 }
@@ -54,28 +62,28 @@ header {
 
 /* Title & text part */
 .bg-container {
-    margin: 0 18px;
+    margin: 0 5%;
 }
 .title {
-    font-size: 20px;
+    font-size: 26px;
     margin-bottom: 20px;
 }
 .about {
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* button */
 .btn {
-    width: 210px;
-    height: 35px;
+    width: 70%;
+    height: 40px;
     border-radius: 25px;
     background-color: var(--pink);
     border: none;
     outline: none;
 /* font style */
     color: white;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.05rem;
 /* position */
@@ -90,58 +98,57 @@ header {
 
 /* Header image */
 #mockup {
-    width: 255px;
+    width: 80%;
     margin: 0 0 25px 0;
 }
 
 
 /* Containers part */
 .container1, .container2, .container3 {
-    width: 56vw;
+    width: 90%;
     border-radius: 25px;
-    margin: 30px auto;
+    margin: 40px auto;
     box-shadow: 1px 1px 1px 1px hsla(209, 11%, 55%, 0.404);
     text-align: center;
 }
 
 #illustration {
-    width: 210px;
+    width: 75%;
     margin: 50px 0 40px 0;
 }
 
 .subtitle {
     font-family: 'Poppins';
-    font-size: 17px;
+    font-size: 20px;
 }
 .subtext {
-    font-size: 12px;
+    font-size: 15px;
     color: var(--grayish-blue);
     line-height: 1.2rem;
-    width: 220px;
-    padding: 10px 0 25px 0;
-    margin: 0 auto;
+    margin: 20px 25px 0 25px;
+    padding-bottom: 25px;
 }
 
 /* Part between description & footer */
 .transition {
     position: relative;
     bottom: -65px;
-    width: 280px;
+    width: 90%;
     padding-top: 40px;
-    margin: 100px auto 0 auto;
+    margin: 60px auto 0 auto;
     background-color: white;
     border-radius: 15px;
     box-shadow: 1px 1px 1px 1px hsla(209, 11%, 55%, 0.404);
     /* Font style */
     text-align: center;
     font-family: 'Poppins';
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     z-index: 2;
 }
 .btn-transition {
     margin: 25px 0 35px 0;
-    font-size: 8px;
+    font-size: 12px;
 }
 
 
@@ -198,7 +205,6 @@ header {
 
 /* Footer part already coded by Frontend Mentor */
 .attribution { 
-    width: 60vw;
     margin: 0 auto;
     font-size: 11px; 
     text-align: center;
@@ -215,10 +221,8 @@ header {
 }
 
 
-    @media (min-width: 800px) {
+    @media (min-width: 765px) {
         .main-container, header {
-            width: 100vw;
-            overflow-x: hidden;
             text-align: left;
         }
 
@@ -226,27 +230,24 @@ header {
 
         /* Blue Container */
         .huddle-logo {
-            display: grid;
-            grid-template-columns: 60vw 40vw;
-            margin: 40px 100px 112px 60px;
+            margin: 0 50px 120px 50px;
         }
         .logo {
             width: 190px;
-            grid-column: 1;
+            height: 40px;
         }
         .tryit {
-            grid-column: 2;
-            top: 0px;
             width: 200px;
             height: 48px;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
         }
 
 
         .wrapper-grid {
             display: grid;
-            grid-template-columns: 46vw 1fr;
+            grid-template-columns: 46vw 4vw 1fr;
+            
         }
 
         .bg-container {
@@ -254,27 +255,25 @@ header {
             width: 35.54vw;
         }
         .title {
-            font-size: 2.64vw;
+            font-size: 24px;
         }
         .about {
-            font-size: 1.25vw;
+            font-size: 14px;
         }
         .btn {
             width: 280px;
             height: 55px;
-            border-radius: 30px;
-            font-size: 14px;
         }
 
         #mockup {
-            width: 47.60vw;
-            margin-top: -85px;
+            width: 42.60vw;
+            margin-left: 40px;
         }
 
 
         /* QUOTES & images containers */
         .container1, .container2, .container3 {
-            width: 85.52vw;
+            width: 85%;
             display: flex;
         }
 
@@ -282,26 +281,29 @@ header {
             flex-direction: row;
         }
         .quote {
-            width: 34.72vw;
             text-align: left;
-            margin: auto 0;
+            margin: auto 0 ;
         }
 
 
         .container3, .container1 {
             flex-direction: row-reverse;
         }
+        .left-quote {
+            padding-left: 3vw;
+        }
         .grow, .users {
             margin: auto 2.5vw auto 11.11vw;
         }
 
         .subtitle {
-            font-size: 1.90vw;
+            font-size: 20px;
+
         }
         .subtext {
-            width: auto;
-            font-size: 1.25vw;
+            font-size: 15px;
             line-height: 1.8rem;
+            margin: 10px 15px 0 0;
         }
 
         #illustration {
@@ -314,60 +316,61 @@ header {
 
         /* Transition between quote & footer */
         .transition {
-            width: 55.59vw;
-            font-size: 2.22vw;
+            width: 65%;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
         }
         .btn-transition {
-            width: 27.1vw;
+            width: 50%;
             height: 75px;
             border-radius: 50px;
-            font-size: 1.32vw;
+            font-size: 18px;
+            margin: 25px auto 35px auto;
         }
 
 
         /* FOOTER with contact and social media */
         .black-container {
             display: grid;
-            grid-template-columns: 35.44vw 30.5vw 10.02vw 25.71vw;
+            grid-template-columns: 40% 30% 20% 10%;
+            grid-template-rows: auto;
             padding: 0 6.95vw;
+        }
+        .firstCol {
+            grid-column: 1;
         }
         .logo-bottom {
             width: 15.98vw;
-            grid-column: 1;
         }
         .lorem, .phone, .email {
             width: 27.79vw;
             font-size: 1.11vw;
-            grid-column: 1;
         }
 
         .list {
             font-size: 1.25vw;
             line-height: 1.8rem;
-        }
-        .column2 {
             grid-column: 2;
-            margin: -130px 0 0 0;
-        }
-        .column3 {
-            grid-column: 2;
+            padding-top: 170px;
         }
 
         .social-logo {
             text-align: left;
-            grid-column: 4;
-            margin: -125px 0 0 -10.95vw;
+            grid-column: 3;
+            padding-top: 125px;
         }
         .copyright {
-            grid-column: 4;
+            grid-column: 2/3;
+            grid-row: 2;
             text-align: left;
             font-size: 0.86vw;
             position: relative;
-            right: 55%;
         }
 
         .attribution {
             width: 100vw;
+            grid-row: 3;
         }
     }
 
@@ -385,21 +388,21 @@ header {
     }
     .column2 {
         flex-direction: column;
-        grid-column: 2;
         width: 15vw;
-        margin: -150px 0 0 0;
     }
     .column3 {
         flex-direction: column;
         grid-column: 3;
         width: 10vw;
-        margin: -150px 0 0 0;
     }
 
     .social-logo {
-        margin: -145px 0 0 -6.95vw;
+        margin: 0 0 0 -6.95vw;
+        grid-column: 4;
+        padding-top: 170px;
     }
     .copyright {
-        right: 45%;
+        left: 0%;
     }
+
 }
